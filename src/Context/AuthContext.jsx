@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginCallApi } from "../helpers/BackendHelper";
+import { themeToast } from "../components/UI/ThemeToaster";
 import ThemeLoader from "../components/Ui/ThemeLoader";
-import { themeToast } from "../Components/UI/ThemeToaster";
 
 const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
@@ -10,7 +10,6 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [initializing, setInitializing] = useState(false);
   const navigate = useNavigate();
 
   // ✅ LOGIN SERVICE ONLY
@@ -44,10 +43,6 @@ export const AuthProvider = ({ children }) => {
     themeToast.info("Logged out");
     navigate("/auth/login", { replace: true });
   };
-
-  if (initializing) {
-    return <ThemeLoader type="fullpage" message="Loading..." />;
-  }
 
   return (
     <AuthContext.Provider

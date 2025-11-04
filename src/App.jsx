@@ -1,9 +1,9 @@
 import React from "react";
 import AppRoutes from "./Routes/Index";
 import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "./Context/AuthContext";
-import { ThemeProvider } from "./Context/ThemeContext";
-import { ThemeToaster } from "./Components/UI/ThemeToaster";
+import { AuthProvider } from "./context/AuthContext";
+import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeToaster } from "./components/UI/ThemeToaster";
 
 function App() {
   return (
