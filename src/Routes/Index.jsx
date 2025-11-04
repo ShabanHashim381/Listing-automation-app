@@ -16,6 +16,8 @@ import { useAuth } from "../Context/AuthContext";
 export default function AppRoutes() {
   const { user, refreshLoading } = useAuth();
 
+  console.log(user, "user");
+
   if (refreshLoading) {
     return <ThemeLoader type="fullpage" message="Authenticating..." />;
   }
@@ -26,7 +28,7 @@ export default function AppRoutes() {
       {!user && (
         <>
           <Route path="/login" element={<Login />} />
-          s <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
         </>
       )}
 
