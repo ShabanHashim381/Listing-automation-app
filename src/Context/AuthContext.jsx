@@ -2,7 +2,6 @@ import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginCallApi } from "../helpers/BackendHelper";
 import { themeToast } from "../components/UI/ThemeToaster";
-import ThemeLoader from "../components/Ui/ThemeLoader";
 
 const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);

@@ -6,9 +6,9 @@ import { PiUserSwitch } from "react-icons/pi";
 import { FaUserGroup } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { RiFileList3Fill } from "react-icons/ri";
-import { useAuth } from "../context/AuthContext";
 import Logo from "../assets/logo.png";
 import Profile from "../Pages/Profile/Profile";
+import { useAuth } from "../Context/AuthContext";
 
 export default function Sidebar({ isOpen, toggleSidebar }) {
   const { user, logout } = useAuth();

@@ -8,10 +8,10 @@ import ListingDetail from "../pages/Listing/ListingDetail/ListingDetail";
 import Listing from "../pages/Listing/Listing";
 import Users from "../pages/User/Users";
 import JobConfig from "../layout/JobConfig";
-import { useAuth } from "../context/AuthContext";
 import ThemeLoader from "../components/Ui/ThemeLoader";
 import Login from "../pages/Auth/Login";
-import Profile from "../pages/Profile/Profile";
+import Profile from "../Pages/Profile/Profile";
+import { useAuth } from "../Context/AuthContext";
 
 export default function AppRoutes() {
   const { user, refreshLoading } = useAuth();
