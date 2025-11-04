@@ -1,9 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useAuth } from "../../Context/AuthContext";
 
 function Profile() {
   const { user } = useAuth();
-  const fileInputRef = useRef(null);
   const [profilePic, setProfilePic] = useState("");
 
   useEffect(() => {

@@ -1,17 +1,17 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import MainLayout from "../Layout/MainLayout";
+import MainLayout from "../layout/MainLayout";
 
-import ListingReport from "../Pages/ListingReport/ListingReport";
-import ListingDetail from "../Pages/Listing/ListingDetail/ListingDetail";
-import Listing from "../Pages/Listing/Listing";
-import Users from "../Pages/User/Users";
-import JobConfig from "../Layout/JobConfig";
-import Profile from "../pages/Profile/Profile";
-import { useAuth } from "../Context/AuthContext";
+import ListingReport from "../pages/ListingReport/ListingReport";
+import ListingDetail from "../pages/Listing/ListingDetail/ListingDetail";
+import Listing from "../pages/Listing/Listing";
+import Users from "../pages/User/Users";
+import JobConfig from "../layout/JobConfig";
 import ThemeLoader from "../components/Ui/ThemeLoader";
-import Login from "../Pages/Auth/Login";
+import Login from "../pages/Auth/Login";
+import Profile from "../Pages/Profile/Profile";
+import { useAuth } from "../Context/AuthContext";
 
 export default function AppRoutes() {
   const { user, refreshLoading } = useAuth();
