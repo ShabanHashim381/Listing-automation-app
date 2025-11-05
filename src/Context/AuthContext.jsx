@@ -5,7 +5,7 @@ import { themeToast } from "../components/UI/ThemeToaster";
 
 const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
-
+console.log("AuthContext loaded");
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
